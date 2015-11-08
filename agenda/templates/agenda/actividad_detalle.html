@@ -1,0 +1,12 @@
+{% extends "agenda/base.html" %}
+
+    {% block content %}
+        <div class="date">
+        {% if actividades.fecha_actividad %}
+            {{ actividades.fecha_actividad }}
+        {% endif %}
+        <a class="btn btn-default" href="{% url "actividad_editar" pk=actividades.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        </div>
+        <h1>{{ actividades.actividad }}</h1>
+        <p>{{ actividades.descripcion|linebreaks }}</p>
+    {% endblock %}

@@ -1,18 +1,13 @@
-<html>
-    <head>
-        <title>Django Girls blog</title>
-    </head>
-    <body>
-      <div>
-       <h1><a href="/">Lista de actividades</a></h1>
-   </div>
+{% extends "agenda/base.html" %}
 
-   {% for post in actividades %}
-       <div>
-           <p>fecha: {{ post.fecha_actividad }}</p>
-           <h1><a href="">{{ post.actividad }}</a></h1>
-           <p>{{ post.descripcion|linebreaks }}</p>
-       </div>
-   {% endfor %}
-    </body>
-</html>
+    {% block content %}
+        {% for post in actividades %}
+            <div class="post">
+                <div class="date">
+                    {{ post.fecha_actividad }}
+                </div>
+                <h1><a href="{% url "agenda.views.actividad_detalle" pk=post.pk %}">{{ post.actividad }}</a></h1>
+                <p>{{ post.descripcion|linebreaks }}</p>
+            </div>
+        {% endfor %}
+    {% endblock content %}
