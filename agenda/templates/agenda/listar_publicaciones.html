@@ -5,9 +5,12 @@
             <div class="post">
                 <div class="date">
                     {{ post.fecha_actividad }}
+                  </br>
+                    <font color="blue" <p>{{ post.estado }}</p> </font>
                 </div>
                 <h1><a href="{% url "agenda.views.actividad_detalle" pk=post.pk %}">{{ post.actividad }}</a></h1>
-                <p>{{ post.descripcion|linebreaks }}</p>
+                <font color="black" <p>{{ post.descripcion|linebreaks }}</p></font>
+
             </div>
         {% endfor %}
     {% endblock content %}

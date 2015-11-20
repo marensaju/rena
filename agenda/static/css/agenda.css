@@ -1,9 +1,10 @@
 h1 a {
         color: #FCA205;
-        font-family: 'Lobster';
+      font-family: 'Indie Flower', cursive;
+
     }
 .page-header {
-            background-color: #ff9400;
+            background-color: #0C64B5;
             margin-top: 0;
             padding: 20px 20px 20px 40px;
         }
@@ -17,16 +18,17 @@ h1 a {
             margin-left: 40px;
         }
 h1, h2, h3, h4 {
-            font-family: 'Lobster', cursive;
+            font-family: 'Indie Flower', cursive;
         }
 
 .date {
             float: right;
-            color: #828282;
+            color: #FEFDFA;
 }
 
 .save {
             float: right;
+
         }
 .post-form textarea, .post-form input {
             width: 100%;
